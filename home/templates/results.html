@@ -2,35 +2,34 @@
 {% block title %}
      Results
 {% endblock %}
-
-
 {% block main %}
- 
-        
-
-
 <div class="row">
     {% for m in data.results %}
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem; margin: 10px;">
         <img src=https://image.tmdb.org/t/p/original/{{m.poster_path}} class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{m.name}}</h5>
           <p class="card-text">{{m.overview}}</p>
+          
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
 
     </div>
     {% endfor %}
-      
-      
-      
-
 </div>
-
-
-
-       
-        
-
 {% endblock %}
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://image.tmdb.org/t/p/original/{{m.poster_path}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{m.name}}</h5>
+        <p class="card-text">{{m.overview}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
 
