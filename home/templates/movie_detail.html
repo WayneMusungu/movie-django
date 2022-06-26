@@ -8,11 +8,8 @@
     <h4 style="color: gray;" ><i>#{{ data.tagline }}</i></h4>
     <img src="https://image.tmdb.org/t/p/w200/{{data.poster_path}}" alt="">
     <hr>
-    <h2>Networks</h2>
-    {% for m in data.networks %}
-        <h3>{{ m.name }}</h3>
-        <img src="https://image.tmdb.org/t/p/w200/{{m.logo_path}}" alt="">
-    {% endfor %}
+    <h2>Overview</h2>
+    {{data.overview}}
     <hr>
     
     <h2>Genres</h2>
@@ -32,12 +29,9 @@
 
     <h2>General Information:</h2>
         <strong>Release date:</strong> {{data.release_date}} <br>
-        <strong>Revenue:</strong> {{data.revenue}} <br>
-        <strong>Runtime:</strong> {{data.last_episode_to_air.episode_number}} <br>
-        <strong>Name:</strong> {{data.last_episode_to_air.name}} <br>
-        <strong>Overview:</strong> {{data.last_episode_to_air.overview}} <br>
-        
-        
+        {% load numbers %}
+        <strong>Revenue:</strong> $ {{data.revenue|format_money}} <br>
+        <strong>Runtime:</strong> {{data.runtime}} minutes <br>
         
         <hr>
 
