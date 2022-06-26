@@ -47,4 +47,9 @@ def index(request):
 def view_tv_detail(request, tv_id):
     data = requests.get(f"https://api.themoviedb.org/3/tv/{tv_id}?api_key={MOVIE_API_KEY}&language=en-US")
     
-    return render (request, 'tv_detail.html',{"data":data.json(), "type":tv_id})
+    return render (request, 'tv_detail.html',{"data":data.json()})
+
+def view_movie_detail(request, movie_id):
+    data = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={MOVIE_API_KEY}&language=en-US")
+    
+    return render (request, 'movie_detail.html',{"data":data.json()})

@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block main %}
-    <h1>{{ data.name }}</h1>
+    <h1>{{ data.title }}</h1>
     <h4 style="color: gray;" ><i>#{{ data.tagline }}</i></h4>
     <img src="https://image.tmdb.org/t/p/w200/{{data.poster_path}}" alt="">
     <hr>
@@ -30,31 +30,15 @@
 
     <hr>
 
-    <!-- <p><strong>Number of seasons: </strong>{{ data.number_of_seasons }}</p>
-    <p><strong>Number of episodes: </strong>{{ data.number_of_episodes }}</p>
-    <hr> -->
-
-    <h2>Last episode as of today</h2>
-        <strong>Air date:</strong> {{data.last_episode_to_air.air_date}} <br>
-        <strong>Season Number:</strong> {{data.last_episode_to_air.season_number}} <br>
-        <strong>Episode number:</strong> {{data.last_episode_to_air.episode_number}} <br>
+    <h2>General Information:</h2>
+        <strong>Release date:</strong> {{data.release_date}} <br>
+        <strong>Revenue:</strong> {{data.revenue}} <br>
+        <strong>Runtime:</strong> {{data.last_episode_to_air.episode_number}} <br>
         <strong>Name:</strong> {{data.last_episode_to_air.name}} <br>
         <strong>Overview:</strong> {{data.last_episode_to_air.overview}} <br>
         
         
         
         <hr>
-
-<!-- 
-    {% for d in data.production_companies %}
-    <strong>Production Company:</strong> {{d.name}} <br>
-    {% endfor %} -->
-   
-
-  
-
-    <!-- <h1>{{ data.overview }}</h1> -->
-    
-
 
 {% endblock %}
