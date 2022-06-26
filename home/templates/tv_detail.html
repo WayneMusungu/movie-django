@@ -5,13 +5,56 @@
 
 {% block main %}
     <h1>{{ data.name }}</h1>
-    <img src="https://image.tmdb.org/t/p/w500/{{data.poster_path}}" alt="">
+    <h4 style="color: gray;" ><i>#{{ data.tagline }}</i></h4>
+    <img src="https://image.tmdb.org/t/p/w200/{{data.poster_path}}" alt="">
+    <hr>
     <h2>Networks</h2>
     {% for m in data.networks %}
         <h3>{{ m.name }}</h3>
-        <img src="https://image.tmdb.org/t/p/w500/{{m.logo_path}}" alt="">
-
+        <img src="https://image.tmdb.org/t/p/w200/{{m.logo_path}}" alt="">
     {% endfor %}
+    <hr>
+    
+    <h2>Genres</h2>
+    <ul>
+        {% for g in data.genres %}
+       <li>{{g.name}}</li> 
+    {% endfor %}
+    </ul>
+    <hr>
+
+    <h2>Language</h2>
+    <ul>
+        <li>{{data.original_language}}</li> 
+    </ul>
+
+    <hr>
+
+    <p><strong>Number of seasons: </strong>{{ data.number_of_seasons }}</p>
+    <p><strong>Number of episodes: </strong>{{ data.number_of_episodes }}</p>
+    <hr>
+
+    <h2>Last episode as of today</h2>
+        <strong>Air date:</strong> {{data.last_episode_to_air.air_date}} <br>
+        <strong>Season Number:</strong> {{data.last_episode_to_air.season_number}} <br>
+        <strong>Episode number:</strong> {{data.last_episode_to_air.episode_number}} <br>
+        <strong>Name:</strong> {{data.last_episode_to_air.name}} <br>
+        <strong>Overview:</strong> {{data.last_episode_to_air.overview}} <br>
+        
+        
+        
+        <hr>
+
+
+    {% for d in data.production_companies %}
+    <strong>Production Company:</strong> {{d.name}} <br>
+    {% endfor %}
+    <hr>
+
+  
+
+    <!-- <h1>{{ data.overview }}</h1> -->
+    
 
 
 {% endblock %}
