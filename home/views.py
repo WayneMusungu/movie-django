@@ -49,11 +49,11 @@ def view_tv_detail(request, tv_id):
     
     recommendations = requests.get(f"https://api.themoviedb.org/3/tv/{tv_id}/recommendations?api_key={MOVIE_API_KEY}&language=en-US")
     
-    return render (request, 'tv_detail.html',{"data":data.json(), "recommendations":recommendations.json()})
+    return render (request, 'tv_detail.html',{"data":data.json(), "recommendations":recommendations.json(), "type":"tv"})
 
 def view_movie_detail(request, movie_id):
     data = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={MOVIE_API_KEY}&language=en-US")
     
     recommendations = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}/recommendations?api_key={MOVIE_API_KEY}&language=en-US")
     
-    return render (request, 'movie_detail.html',{"data":data.json(), "recommendations":recommendations.json()})
+    return render (request, 'movie_detail.html',{"data":data.json(), "recommendations":recommendations.json(),"type":"movie" })
