@@ -21,7 +21,7 @@ def search(request):
         # data = requests.get(f"https://api.themoviedb.org/3/search/tv?api_key={MOVIE_API_KEY}&language=en-US&page=1&include_adult=true&query={query}")
         
         
-        data = requests.get(f"https://api.themoviedb.org/3/search/{request.GET.get('type')}?api_key={MOVIE_API_KEY}&language=en-US&page=1&include_adult=true&query={query}")
+        data = requests.get(f"https://api.themoviedb.org/3/search/{request.GET.get('type')}?api_key={MOVIE_API_KEY}&language=en-US&page=1&include_adult=false&query={query}")
         '''
         Looking for the response of the request we use (data.json()) or (data.text)
         '''
@@ -47,9 +47,13 @@ def index(request):
 def view_tv_detail(request, tv_id):
     data = requests.get(f"https://api.themoviedb.org/3/tv/{tv_id}?api_key={MOVIE_API_KEY}&language=en-US")
     
-    return render (request, 'tv_detail.html',{"data":data.json()})
+    recommendations = requests.get(f"https://api.themoviedb.org/3/tv/{tv_id}/recommendations?api_key={MOVIE_API_KEY}&language=en-US")
+    
+    return render (request, 'tv_detail.html',{"data":data.json(), "recommendations":recommendations.json()})
 
 def view_movie_detail(request, movie_id):
     data = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={MOVIE_API_KEY}&language=en-US")
     
-    return render (request, 'movie_detail.html',{"data":data.json()})
+    recommendations = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}/recommendations?api_key={MOVIE_API_KEY}&language=en-US")
+    
+    return render (request, 'movie_detail.html',{"data":data.json(), "recommendations":recommendations.json()})

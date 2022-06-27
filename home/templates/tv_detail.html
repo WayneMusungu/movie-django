@@ -45,6 +45,26 @@
         
         <hr>
 
+        <h2>Reccomendations</h2>
+        <div class="row">
+            {% for m in recommendations.results %}
+            <div class="card" style="width: 18rem; margin: 10px;">
+                <img src=https://image.tmdb.org/t/p/original/{{m.poster_path}} class="card-img-top" alt="...">
+                <div class="card-body">
+                  {% if  m.name %}
+                    <h5 class="card-title">{{m.name}}</h5>
+                  {% else %}
+                    <h5 class="card-title">{{m.title}}</h5>
+                  {% endif %}
+                  <p class="card-text">{{m.overview}}</p>
+                  
+                  <a href="/{{ type }}/{{ m.id }}/" class="btn btn-primary">View Details</a>
+                </div>
+        
+            </div>
+            {% endfor %}
+        </div>
+
 <!-- 
     {% for d in data.production_companies %}
     <strong>Production Company:</strong> {{d.name}} <br>
