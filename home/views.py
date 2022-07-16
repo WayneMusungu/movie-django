@@ -57,3 +57,11 @@ def view_movie_detail(request, movie_id):
     recommendations = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}/recommendations?api_key={MOVIE_API_KEY}&language=en-US")
     
     return render (request, 'movie_detail.html',{"data":data.json(), "recommendations":recommendations.json(),"type":"movie" })
+
+
+def view_trendings_results(request):
+    type = request.GET.get("media_type")
+    time_window = request.GET.get("time_window")
+
+    trendings = requests.get(f"https://api.themoviedb.org/3/trending/{type}/{time_window}?api_key={MOVIE_API_KEY}&language=en-US")
+    return JsonResponse(trendings.json())
