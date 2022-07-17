@@ -30,10 +30,14 @@
     <hr>
 
     <h2>General Information:</h2>
-        <strong>Release date:</strong> {{data.release_date}} <br>
         {% load numbers %}
+        <strong>Movie Budget:</strong> $ {{data.budget| format_money}}<br>
+        <strong>Release date:</strong> {{data.release_date}} <br>
         <strong>Revenue:</strong> $ {{data.revenue|format_money}} <br>
         <strong>Runtime:</strong> {{data.runtime}} minutes <br>
+
+        
+        
         
         <hr>
 
