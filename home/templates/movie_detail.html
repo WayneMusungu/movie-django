@@ -5,7 +5,9 @@
 
 {% block main %}
     <h1>{{ data.title }}</h1>
-    <h4 style="color: gray;" ><i>#{{ data.tagline }}</i></h4>
+    {% if data.tagline %}
+        <h4 style="color: gray;" ><i>#{{ data.tagline }}</i></h4>
+    {% endif %}
     <img src="https://image.tmdb.org/t/p/w200/{{data.poster_path}}" alt="">
     <hr>
     <h2>Overview</h2>
