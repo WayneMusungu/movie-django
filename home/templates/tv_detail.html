@@ -6,7 +6,31 @@
 {% block main %}
     <h1>{{ data.name }}</h1>
     <h4 style="color: gray;" ><i>#{{ data.tagline }}</i></h4>
+
+    
+    
+    {% if data.next_episode_to_air %}
+    <strong>Next Episode to air:</strong> {{ data.next_episode_to_air.air_date }} <br>
+    <strong>Episode Number:</strong> {{ data.next_episode_to_air.episode_number }} <br>
+    
+    <h4></h4>
+    {% else %}
+
+    <strong>No new Episode to air</strong> <br>
+    
+    
+    {% endif %}
+
+    {% if data.homepage %}
+    Tv show homepage  {{data.homepage}} <br>
+    {% endif %}
+
+    
     <img src="https://image.tmdb.org/t/p/w200/{{data.poster_path}}" alt="">
+
+
+    <a href="homepage {{data.homepage}}"></a>
+    
     <hr>
     <h2>Networks</h2>
     {% for m in data.networks %}
@@ -30,16 +54,21 @@
 
     <hr>
 
-    <!-- <p><strong>Number of seasons: </strong>{{ data.number_of_seasons }}</p>
+
+    <h2>Season number and Episodes</h2>
+
+    <p><strong>Number of seasons: </strong>{{ data.number_of_seasons }}</p>
     <p><strong>Number of episodes: </strong>{{ data.number_of_episodes }}</p>
-    <hr> -->
+    <hr>
 
     <h2>Last episode as of today</h2>
         <strong>Air date:</strong> {{data.last_episode_to_air.air_date}} <br>
         <strong>Season Number:</strong> {{data.last_episode_to_air.season_number}} <br>
         <strong>Episode number:</strong> {{data.last_episode_to_air.episode_number}} <br>
+        <strong>Runtime:</strong> {{data.last_episode_to_air.runtime}} <br>
         <strong>Name:</strong> {{data.last_episode_to_air.name}} <br>
         <strong>Overview:</strong> {{data.last_episode_to_air.overview}} <br>
+        
         
         
         
