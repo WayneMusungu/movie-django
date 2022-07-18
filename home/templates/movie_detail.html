@@ -31,9 +31,16 @@
 
     <h2>General Information:</h2>
         {% load numbers %}
-        <strong>Movie Budget:</strong> $ {{data.budget| format_money}}<br>
+        {% if data.budget %}
+            <strong>Movie Budget:</strong> $ {{data.budget| format_money}}<br>
+        {% endif %}
+
         <strong>Release date:</strong> {{data.release_date}} <br>
-        <strong>Revenue:</strong> $ {{data.revenue|format_money}} <br>
+        
+        {% if data.revenue %}
+            <strong>Revenue:</strong> $ {{data.revenue|format_money}} <br>
+        {% endif %}
+        
         <strong>Runtime:</strong> {{data.runtime}} minutes <br>
 
         
