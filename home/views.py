@@ -27,21 +27,19 @@ def search(request):
         '''
         print(data.json())
         # print(data.text)
-            
-            
+               
     else:
         return HttpResponse("Please enter a search query")
-    
-    
-    
-    
-    
+     
     return render(request, 'results.html',{"data":data.json(),"type": request.GET.get("type")})
+
+
 
 def index(request):
     return render (request, "index.html")
 
 # https://api.themoviedb.org/3/search/tv?api_key=03401687fc726546579b53d2f0d65ee7&language=en-US&page=1&include_adult=false&query=batman
+
 
 
 def view_tv_detail(request, tv_id):
@@ -51,6 +49,8 @@ def view_tv_detail(request, tv_id):
     
     return render (request, 'tv_detail.html',{"data":data.json(), "recommendations":recommendations.json(), "type":"tv"})
 
+
+
 def view_movie_detail(request, movie_id):
     data = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={MOVIE_API_KEY}&language=en-US")
     
@@ -59,9 +59,13 @@ def view_movie_detail(request, movie_id):
     return render (request, 'movie_detail.html',{"data":data.json(), "recommendations":recommendations.json(),"type":"movie" })
 
 
+
 def view_trendings_results(request):
     type = request.GET.get("media_type")
     time_window = request.GET.get("time_window")
 
     trendings = requests.get(f"https://api.themoviedb.org/3/trending/{type}/{time_window}?api_key={MOVIE_API_KEY}&language=en-US")
     return JsonResponse(trendings.json())
+
+
+
