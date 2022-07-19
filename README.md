@@ -7,9 +7,7 @@
 - [Description](#Description)
 - [Installation Requirement](#Installation)
 - [Technologies Used](#Technologies-Used)
-- [Reference](#Reference)
 - [Licence](#LICENSE)
-- [Authors Info](#Author-Info)
 
 ## Description 
 
