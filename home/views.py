@@ -23,6 +23,7 @@ def search(request):
         # data = requests.get(f"https://api.themoviedb.org/3/search/tv?api_key={keys.MOVIE_API_KEY}&language=en-US&page=1&include_adult=false&query={query}")
         
         
+        
         data = requests.get(f"https://api.themoviedb.org/3/search/{request.GET.get('type')}?api_key={wayne.MOVIE_API_KEY}&language=en-US&page=1&include_adult=false&query={query}")
         '''
         Looking for the response of the request we use (data.json()) or (data.text)
