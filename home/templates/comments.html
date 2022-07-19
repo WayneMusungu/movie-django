@@ -14,4 +14,10 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    {% for c in comments %}
+        <div>
+            {{ c.user }} on {{ c.created_at }} said: <br> {{ c.comment }}
+        </div>
+        <br>
+    {% endfor %}
 {% endblock %}
