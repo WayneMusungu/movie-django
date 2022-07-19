@@ -102,7 +102,6 @@ DATABASES = {
            'HOST': config('DB_HOST'),
            'PORT': '5432',
        }
-
    }
 
 db_from_env = dj_database_url.config(conn_max_age=500)
