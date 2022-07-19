@@ -20,7 +20,7 @@ def search(request):
     '''
     if query:
         
-        # data = requests.get(f"https://api.themoviedb.org/3/search/tv?api_key={MOVIE_API_KEY}&language=en-US&page=1&include_adult=true&query={query}")
+        # data = requests.get(f"https://api.themoviedb.org/3/search/tv?api_key={MOVIE_API_KEY}&language=en-US&page=1&include_adult=false&query={query}")
         
         
         data = requests.get(f"https://api.themoviedb.org/3/search/{request.GET.get('type')}?api_key={MOVIE_API_KEY}&language=en-US&page=1&include_adult=false&query={query}")
