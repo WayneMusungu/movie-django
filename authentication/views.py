@@ -16,3 +16,25 @@ def register(request):
 
     else:
         return render(request, "register.html")
+    
+def login_view(request):
+    if request.method == "POST":
+
+        username = request.POST["username"]
+        password = request.POST["password"]
+
+        user = authenticate(usename=username, password=password)
+
+        if user is not None:
+            login(request, user)
+        else:
+            return HttpResponse("wrong username or password")
+
+        return HttpResponse("success")
+
+    else:
+        return render(request, "login.html")
+
+def logout_view(request):
+    logout(request)
+    return HttpResponse("logged out successfully")
