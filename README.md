@@ -21,7 +21,6 @@ This is a movie website using The Movie Database API and **Django** as backend f
     - Heroku
     - Postgresql
 
-[Go Back to the top](#Wayne Movie)
 
 # Installation
 
