@@ -13,7 +13,9 @@
 
 This is a movie website using The Movie Database API and **Django** as backend framework. This application enables users to view the latest trending movies and Tv Shows, search for Tv Shows and movies and get detailed information concerning their search.
  
+#### Website Screenshot
 ![LANDING PAGE](wayne.png)
+![LANDING PAGE](wayne2.png)
 
 #### Technologies used
     - Python 3.8
