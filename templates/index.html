@@ -4,28 +4,13 @@
 {% endblock %}
 
 
-{% block main %}
-    <form action="/search/" method="get" class="row g-3">
-        <select class="form-select" name="type"  class="mb-3">
-            <option value="movie">Movie</option>
-            <option value="tv">Tv Shows</option>
-          </select>
-
-        <div class="col-auto" >
-            <input type="text" class="form-control" placeholder="Search Query" name="q">
-        </div>
-        <div class="col-auto" >
-            <button type="submit" class="btn btn-primary">
-                Search
-            </button>
-        </div>
-    </form>
+{% block content %}
     <h2>Trending</h2>
     <div class="input-group mb-3">
         <select class="form-select" id="media_type">
           <option selected>All Trending Media Types</option>
-          <option value="movie">All Trending Movies</option>
-          <option value="tv">All Trending TV Shows</option>
+          <option value="movie">Trending Movies</option>
+          <option value="tv">Trending TV Shows</option>
         </select>
     </div>
     <div id="trendings" class="row g-3">
@@ -56,7 +41,7 @@
                     mainDiv.setAttribute("class", "card");
                     mainDiv.setAttribute("style", "width: 18rem;  margin: 10px;");
                     var img = document.createElement("img");
-                    img.setAttribute("src", "https://image.tmdb.org/t/p/w200" + data.results[i].poster_path);
+                    img.setAttribute("src", "https://image.tmdb.org/t/p/original" + data.results[i].poster_path);
                     img.setAttribute("class", "card-img-top");
                     img.setAttribute("alt", "...");
                     var body = document.createElement("div");

@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 import requests
 from django.http import HttpResponse, JsonResponse
-from .models import Comment
 from django.contrib.auth.models import User
 import home.wayne as wayne
 
