@@ -71,23 +71,4 @@ def view_trendings_results(request):
 
 
 
-def comment_page(request,movie_id):
-    if request.method == "POST":
-        user = request.user
-        comment = request.POST.get("comment")
-        
-        if not request.user.is_authenticated:
-            user = User.objects.get(id=1)
-            
-        Comment(comment=comment, user=user, movie_id=movie_id).save()
-        
-        return redirect(f"/movie/{movie_id}/comments/")
-        
-    else:
-        data = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={wayne.MOVIE_API_KEY}&language=en-US")
-        
-        title = data.json()["title"]
-        
-        comments = reversed(Comment.objects.filter(movie_id=movie_id))
-        
-        return render (request, "comments.html", {"title":title, "comments":comments})
+
