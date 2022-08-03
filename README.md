@@ -1,21 +1,10 @@
-# Wayne Movie
-
-#### By Wayne Musungu 
-
-## Table of Content
-
-- [Description](#Description)
-- [Installation Requirement](#Installation)
-- [Technologies Used](#Technologies-Used)
-- [License](#LICENSE)
-
 ## Description 
 
 This is a movie website where users can get to search for Movies and Tv Shows, view their detailed information and get recommendations for various Movies and Tv Shows.
 
 ##### Link to Live Site
 
-(https://waynemovie.herokuapp.com/)
+[Link](https://waynemovie.herokuapp.com/)
  
 #### Website Demo
 ![LANDING PAGE](Home.gif)
@@ -33,7 +22,7 @@ This is a movie website where users can get to search for Movies and Tv Shows, v
 
 ### Requirements
 
-Go to [The Movie Database] (https://www.themoviedb.org/) and sign up for an account 
+Go to [The Movie Database](https://www.themoviedb.org/) and sign up for an account 
 
 1. Go to your accounts settings page
 2. Click on the API menu 
