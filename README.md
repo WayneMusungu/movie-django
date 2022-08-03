@@ -11,7 +11,7 @@
 
 ## Description 
 
-This is a movie website that users can get to search for Movies and Tv Shows, view their detailed information and get recommendation of various Movies and Tv Shows.
+This is a movie website where users can get to search for Movies and Tv Shows, view their detailed information and get recommendations for various Movies and Tv Shows.
 
 ##### Link to Live Site
 
@@ -33,7 +33,7 @@ This is a movie website that users can get to search for Movies and Tv Shows, vi
 
 ### Requirements
 
-Go to [The Movie Database] (https://www.themoviedb.org/) and sign up for an acount 
+Go to [The Movie Database] (https://www.themoviedb.org/) and sign up for an account 
 
 1. Go to your accounts settings page
 2. Click on the API menu 
@@ -43,12 +43,12 @@ Go to [The Movie Database] (https://www.themoviedb.org/) and sign up for an acou
 
 
 
-#### Install dependancies
-First create `.env` file inside this file you need to store your API Key. Below is how the `.env` file should look like:
+#### Install dependencies
+First, create a `.env` file inside this file you need to store your API Key. Below is how the `.env` file should look like:
 `MOVIE_API_KEY="your_tmdb_api_key"`
 `SECRET_KEY='django_secret_key'`
 
-Install dependancies that will create an environment for the app to run
+Install dependencies that will create an environment for the app to run
 `pip install -r requirements.txt`
 
 
@@ -73,7 +73,7 @@ copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
