@@ -33,7 +33,8 @@ This is a movie website that users can get to search for Movies and Tv Shows, vi
 
 ### Requirements
 
-Go to The Movie Database and sign up for an acount (https://www.themoviedb.org/)
+
+Go to [The Movie Database] (https://www.themoviedb.org/) and sign up for an acount 
 
 1. Go to your accounts settings page
 2. Click on the API menu 
@@ -56,11 +57,6 @@ Install dependancies that will create an environment for the app to run
 ```bash
 python manage.py runserver
 ```
-
-Open [localhost:8000](http://127.0.0.1:8000/)
-
-
-
 
 # License
 
