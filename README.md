@@ -7,17 +7,18 @@
 - [Description](#Description)
 - [Installation Requirement](#Installation)
 - [Technologies Used](#Technologies-Used)
-- [Licence](#LICENSE)
+- [License](#LICENSE)
 
 ## Description 
 
-This is a movie website using The Movie Database API and **Django** as backend framework. This application enables users to view the latest trending movies and Tv Shows, search for Tv Shows and movies and get detailed information concerning their search.
+This is a movie website that users can get to search for Movies and Tv Shows, view their detailed information and get recommendation of various Movies and Tv Shows.
+
+##### Link to Live Site
+
+(https://waynemovie.herokuapp.com/)
  
-#### Website Screenshot
-
+#### Website Demo
 ![LANDING PAGE](Home.gif)
-
-
 
 
 #### Technologies used
@@ -26,33 +27,40 @@ This is a movie website using The Movie Database API and **Django** as backend f
     - HTML
     - Bootstrap 5
     - Heroku
-    - Postgresql
 
 
 # Installation
 
 ### Requirements
 
-Either a computer,phone,tablet or an Ipad
-Make sure you have access to internet
-Click on the live link in the about section 
+Go to The Movie Database and sign up for an acount (https://www.themoviedb.org/)
+
+1. Go to your accounts settings page
+2. Click on the API menu 
+3. Click on create an API Key to generate a new API KEY
+
+
+
+
 
 #### Install dependancies
+First create `.env` file inside this file you need to store your API Key. Below is how the `.env` file should look like:
+`MOVIE_API_KEY="your_tmdb_api_key"`
+`SECRET_KEY='django_secret_key'`
+
 Install dependancies that will create an environment for the app to run
 `pip install -r requirements.txt`
 
 
 #### Run the app
 ```bash
-python3.8 manage.py runserver
+python manage.py runserver
 ```
 
 Open [localhost:8000](http://127.0.0.1:8000/)
 
 
-##### Link to Live Site
 
-(https://waynemovie.herokuapp.com/)
 
 # License
 
