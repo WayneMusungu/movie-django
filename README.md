@@ -15,6 +15,8 @@ This is a movie website using The Movie Database API and **Django** as backend f
  
 #### Website Screenshot
 ![LANDING PAGE](wayne2.png)
+<iframe src="https://drive.google.com/file/d/1DexRqYuaTz3_uy1g-GZntf_sT-VA3sP5/preview" width="640" height="480"></iframe>
+
 
 #### Technologies used
     - Python 3.8
