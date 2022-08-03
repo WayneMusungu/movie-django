@@ -33,7 +33,6 @@ This is a movie website that users can get to search for Movies and Tv Shows, vi
 
 ### Requirements
 
-
 Go to [The Movie Database] (https://www.themoviedb.org/) and sign up for an acount 
 
 1. Go to your accounts settings page
