@@ -28,7 +28,10 @@
 
     
     
-    <img style="width:18rem;"  src="https://image.tmdb.org/t/p/original/{{data.poster_path}}" alt="">
+    <img style="width:18rem;"  src="https://image.tmdb.org/t/p/original/{{data.poster_path}}" alt=""><br>
+    <strong>Tv Show Vote Count: </strong>{{data.vote_count}}<br>
+    <strong>Tv Show Vote Average Rating: </strong>{{data.vote_average}}<br>
+    
     
     <hr>
     <h2>Networks</h2>
@@ -68,16 +71,22 @@
         <strong>Air date:</strong> {{data.last_episode_to_air.air_date}} <br>
         <strong>Season Number:</strong> {{data.last_episode_to_air.season_number}} <br>
         <strong>Episode number:</strong> {{data.last_episode_to_air.episode_number}} <br>
+        <strong>Episode Vote Count: </strong>{{data.last_episode_to_air.vote_count}}<br>
+        
+        {% if data.last_episode_to_air.vote_average %}
+        <strong>Episode Average Rating:</strong> {{data.last_episode_to_air.vote_average}} <br>
+        {% endif %}
         <strong>Runtime:</strong> {{data.last_episode_to_air.runtime}} minutes<br>
         <strong>Name:</strong> {{data.last_episode_to_air.name}} <br>
         <strong>Overview:</strong> {{data.last_episode_to_air.overview}} <br>
         
         <hr>
 
+        {% if recommendations.results %}
         <h2>Reccomendations</h2>
         <div class="row">
             {% for m in recommendations.results %}
-            <div class="card" style="width: 18rem; margin: 10px;">
+            <div class="card" style="width: 18rem; margin: 10px; padding: 10px">
                 <img src=https://image.tmdb.org/t/p/original/{{m.poster_path}} class="card-img-top" alt="...">
                 <div class="card-body">
                   {% if  m.name %}
@@ -93,6 +102,10 @@
             </div>
             {% endfor %}
         </div>
+        {% else %}
+        <h2> {{ data.name }} has no Reccomendations</h2>
+
+        {% endif %}
 
 <!-- 
     {% for d in data.production_companies %}
